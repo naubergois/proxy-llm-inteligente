@@ -35,6 +35,7 @@ class Handler(BaseHTTPRequestHandler):
         messages = body.get("messages") or []
         policy = body.get("policy") or "auto"
         out = DOOR.route(messages, policy=policy)
+        tokens = int(out.get("tokens") or 0)
         payload = {
             "id": "chatcmpl-proxy",
             "object": "chat.completion",
@@ -46,7 +47,11 @@ class Handler(BaseHTTPRequestHandler):
                     "finish_reason": "stop",
                 }
             ],
-            "usage": {"prompt_tokens": 0, "completion_tokens": len(out["answer"])},
+            "usage": {
+                "prompt_tokens": 0,
+                "completion_tokens": tokens,
+                "total_tokens": tokens,
+            },
             "route": out["route"],
         }
         self._json(200, payload)

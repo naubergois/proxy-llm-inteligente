@@ -1,0 +1,22 @@
+{
+  "n": 3,
+  "half_life": 3,
+  "tau": 1.0,
+  "length_cutoff": 80,
+  "routellm_threshold": 0.4,
+  "token_cap": 256,
+  "probe_seeds": [0, 1],
+  "scent_seeds": [10, 11, 12],
+  "vote_seeds": [10, 11, 12],
+  "policies": [
+    "sempre_barato",
+    "sempre_caro",
+    "comprimento",
+    "routellm",
+    "frugalgpt",
+    "voto",
+    "cheiro"
+  ],
+  "backend": "mock",
+  "notes": "Pré-registro do porteiro. Mock só fia o protocolo. Paper pede SLM (MLX) ou caro via API. half_life=n para sobrarem 2 rastros vivos como sinal de rota."
+}

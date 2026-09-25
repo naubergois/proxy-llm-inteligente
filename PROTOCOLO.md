@@ -1,26 +1,34 @@
 # Protocolo
 
-Pré-registrar: teto de token, N do enxame, meia-vida do caderno, limiar de incerteza, seeds.
+Pré-registro em `experiments/preregister.json`: N, meia-vida, limiar do caderno, corte de comprimento, limiar RouteLLM, teto de token, seeds.
 
-## Rotas
+## Incerteza
 
-| Rota | Quando |
+Duas amostras do barato, seeds 0 e 1. Se o texto normalizado diverge, está inseguro. Logprob baixo vale se o backend trouxer. A string «não sei» não é o sinal.
+
+## O caderno como sinal
+
+N células escrevem e o relógio anda. Com `half_life = N`, restam os dois rastros mais novos. Se eles concordam (`tau = 1`), fica. Se misturam ou o caderno esvaziou, sobe. A célula seguinte lê o que ainda está vivo — se o rastro não muda a resposta, não é estigmergia.
+
+## Políticas
+
+| Nome | O que faz |
 |---|---|
-| `cache` | Mesma pergunta (hash) já vista nesta sessão. |
-| `barato` | Primeira tentativa, uma célula. |
-| `cheiro` | Barato inseguro (resposta curta demais, ou “não sei”, ou baixa concordância se N>1). Enxame no caderno que some. |
-| `caro` | Cheiro ainda inseguro **ou** o barato caiu. Uma chamada. |
-| `voto` | Controle: N amostras, maioria. Mesmo orçamento que o cheiro. |
+| `sempre_barato` | Uma célula fraca. |
+| `sempre_caro` | Uma chamada forte (oráculo no mock). |
+| `comprimento` | Prompt &lt; 80 caracteres → barato; senão caro. Controle fraco. |
+| `routellm` | Score só do texto (tamanho, número grande, operador). Uma geração. |
+| `frugalgpt` | Duas amostras; se discordam, sobe. |
+| `voto` | N amostras independentes, maioria. Sem caro. |
+| `cheiro` | Duas amostras; se discordam, enxame no caderno; se o vivo não fecha, sobe. |
 
-## Baselines
+## Tarefas
 
-1. Sempre `barato`.
-2. Sempre `caro` (no mock, um gerador mais fiel).
-3. Comprimento: se o prompt tem < 80 caracteres → barato; senão caro.
+`data/tasks.json`: fácil curto, fácil longo, difícil curto, difícil longo. Gabarito único. No mock, cada item tem regime (`easy` / `flip` / `stuck` / `noisy`). Isso é modelo de capacidade, não resultado de paper.
 
 ## Desfechos
 
-Acerto no gabarito. Tokens (ou caracteres, no mock). Taxa de cada rota. Latência.
+Acerto no gabarito. Tokens. Taxa de cada rota. Acerto por faixa (H1 mora no difícil curto vs fácil longo).
 
 ## Máquina
 

@@ -1,0 +1,245 @@
+{
+  "backend": "mock",
+  "caro": "mock",
+  "fixture": true,
+  "overall": [
+    {
+      "politica": "sempre_barato",
+      "n": 22,
+      "acerto": 0.45454545454545453,
+      "tokens": 176,
+      "rotas": {
+        "barato": 22
+      }
+    },
+    {
+      "politica": "sempre_caro",
+      "n": 22,
+      "acerto": 1.0,
+      "tokens": 1408,
+      "rotas": {
+        "caro": 22
+      }
+    },
+    {
+      "politica": "comprimento",
+      "n": 22,
+      "acerto": 0.6363636363636364,
+      "tokens": 624,
+      "rotas": {
+        "barato": 14,
+        "caro": 8
+      }
+    },
+    {
+      "politica": "routellm",
+      "n": 22,
+      "acerto": 0.6818181818181818,
+      "tokens": 792,
+      "rotas": {
+        "barato": 11,
+        "caro": 11
+      }
+    },
+    {
+      "politica": "frugalgpt",
+      "n": 22,
+      "acerto": 0.8181818181818182,
+      "tokens": 1056,
+      "rotas": {
+        "barato": 11,
+        "caro": 11
+      }
+    },
+    {
+      "politica": "voto",
+      "n": 22,
+      "acerto": 0.3181818181818182,
+      "tokens": 528,
+      "rotas": {
+        "voto": 22
+      }
+    },
+    {
+      "politica": "cheiro",
+      "n": 22,
+      "acerto": 0.5,
+      "tokens": 808,
+      "rotas": {
+        "barato": 11,
+        "cheiro": 8,
+        "caro": 3
+      }
+    }
+  ],
+  "bands": [
+    {
+      "politica": "sempre_barato",
+      "band": "easy_short",
+      "n": 4,
+      "acerto": 1.0
+    },
+    {
+      "politica": "sempre_barato",
+      "band": "easy_long",
+      "n": 3,
+      "acerto": 1.0
+    },
+    {
+      "politica": "sempre_barato",
+      "band": "hard_short",
+      "n": 10,
+      "acerto": 0.2
+    },
+    {
+      "politica": "sempre_barato",
+      "band": "hard_long",
+      "n": 5,
+      "acerto": 0.2
+    },
+    {
+      "politica": "sempre_caro",
+      "band": "easy_short",
+      "n": 4,
+      "acerto": 1.0
+    },
+    {
+      "politica": "sempre_caro",
+      "band": "easy_long",
+      "n": 3,
+      "acerto": 1.0
+    },
+    {
+      "politica": "sempre_caro",
+      "band": "hard_short",
+      "n": 10,
+      "acerto": 1.0
+    },
+    {
+      "politica": "sempre_caro",
+      "band": "hard_long",
+      "n": 5,
+      "acerto": 1.0
+    },
+    {
+      "politica": "comprimento",
+      "band": "easy_short",
+      "n": 4,
+      "acerto": 1.0
+    },
+    {
+      "politica": "comprimento",
+      "band": "easy_long",
+      "n": 3,
+      "acerto": 1.0
+    },
+    {
+      "politica": "comprimento",
+      "band": "hard_short",
+      "n": 10,
+      "acerto": 0.2
+    },
+    {
+      "politica": "comprimento",
+      "band": "hard_long",
+      "n": 5,
+      "acerto": 1.0
+    },
+    {
+      "politica": "routellm",
+      "band": "easy_short",
+      "n": 4,
+      "acerto": 1.0
+    },
+    {
+      "politica": "routellm",
+      "band": "easy_long",
+      "n": 3,
+      "acerto": 1.0
+    },
+    {
+      "politica": "routellm",
+      "band": "hard_short",
+      "n": 10,
+      "acerto": 0.3
+    },
+    {
+      "politica": "routellm",
+      "band": "hard_long",
+      "n": 5,
+      "acerto": 1.0
+    },
+    {
+      "politica": "frugalgpt",
+      "band": "easy_short",
+      "n": 4,
+      "acerto": 1.0
+    },
+    {
+      "politica": "frugalgpt",
+      "band": "easy_long",
+      "n": 3,
+      "acerto": 1.0
+    },
+    {
+      "politica": "frugalgpt",
+      "band": "hard_short",
+      "n": 10,
+      "acerto": 0.7
+    },
+    {
+      "politica": "frugalgpt",
+      "band": "hard_long",
+      "n": 5,
+      "acerto": 0.8
+    },
+    {
+      "politica": "voto",
+      "band": "easy_short",
+      "n": 4,
+      "acerto": 1.0
+    },
+    {
+      "politica": "voto",
+      "band": "easy_long",
+      "n": 3,
+      "acerto": 1.0
+    },
+    {
+      "politica": "voto",
+      "band": "hard_short",
+      "n": 10,
+      "acerto": 0.0
+    },
+    {
+      "politica": "voto",
+      "band": "hard_long",
+      "n": 5,
+      "acerto": 0.0
+    },
+    {
+      "politica": "cheiro",
+      "band": "easy_short",
+      "n": 4,
+      "acerto": 1.0
+    },
+    {
+      "politica": "cheiro",
+      "band": "easy_long",
+      "n": 3,
+      "acerto": 1.0
+    },
+    {
+      "politica": "cheiro",
+      "band": "hard_short",
+      "n": 10,
+      "acerto": 0.2
+    },
+    {
+      "politica": "cheiro",
+      "band": "hard_long",
+      "n": 5,
+      "acerto": 0.4
+    }
+  ]
+}

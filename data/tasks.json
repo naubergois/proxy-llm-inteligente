@@ -1,7 +1,156 @@
 [
-  {"id": "a01", "q": "Quanto é 2 + 2?", "gold": "4"},
-  {"id": "a02", "q": "Quanto é 2+2?", "gold": "4"},
-  {"id": "f01", "q": "Quantos lados tem um hexágono?", "gold": "6"},
-  {"id": "f02", "q": "Qual a capital do Japão?", "gold": "Tóquio"},
-  {"id": "f03", "q": "Qual o símbolo químico da água?", "gold": "H2O"}
+  {
+    "id": "e01",
+    "q": "Quanto é 2 + 2?",
+    "gold": "4",
+    "band": "easy_short",
+    "mock_regime": "easy"
+  },
+  {
+    "id": "e02",
+    "q": "Quanto é 2+2?",
+    "gold": "4",
+    "band": "easy_short",
+    "mock_regime": "easy"
+  },
+  {
+    "id": "e03",
+    "q": "Quanto é 1 + 1?",
+    "gold": "2",
+    "band": "easy_short",
+    "mock_regime": "easy"
+  },
+  {
+    "id": "e04",
+    "q": "Quanto é 10 − 1?",
+    "gold": "9",
+    "band": "easy_short",
+    "mock_regime": "easy"
+  },
+  {
+    "id": "el01",
+    "q": "Depois de uma explicação bem longa sobre aritmética do primeiro ano, a criança pergunta quanto é dois mais dois. Responda só o número.",
+    "gold": "4",
+    "band": "easy_long",
+    "mock_regime": "easy"
+  },
+  {
+    "id": "el02",
+    "q": "Num texto comprido de revisão escolar, o enunciado pede o resultado de um mais um, conta que toda criança acerta. Responda só o número.",
+    "gold": "2",
+    "band": "easy_long",
+    "mock_regime": "easy"
+  },
+  {
+    "id": "el03",
+    "q": "Ao fim de um parágrafo longo sobre subtração simples, alguém pergunta quanto vale dez menos um. Responda só o número.",
+    "gold": "9",
+    "band": "easy_long",
+    "mock_regime": "easy"
+  },
+  {
+    "id": "hs01",
+    "q": "Lados do hexágono?",
+    "gold": "6",
+    "band": "hard_short",
+    "mock_regime": "flip"
+  },
+  {
+    "id": "hs02",
+    "q": "Qual a capital do Japão?",
+    "gold": "Tóquio",
+    "band": "hard_short",
+    "mock_regime": "flip"
+  },
+  {
+    "id": "hs03",
+    "q": "Capital do Japão?",
+    "gold": "Tóquio",
+    "band": "hard_short",
+    "mock_regime": "flip"
+  },
+  {
+    "id": "hs04",
+    "q": "17+28?",
+    "gold": "45",
+    "band": "hard_short",
+    "mock_regime": "noisy"
+  },
+  {
+    "id": "hs05",
+    "q": "Resto de 29÷5?",
+    "gold": "4",
+    "band": "hard_short",
+    "mock_regime": "noisy"
+  },
+  {
+    "id": "hs06",
+    "q": "2³?",
+    "gold": "8",
+    "band": "hard_short",
+    "mock_regime": "flip"
+  },
+  {
+    "id": "hs07",
+    "q": "Dias do ano bissexto?",
+    "gold": "366",
+    "band": "hard_short",
+    "mock_regime": "stuck"
+  },
+  {
+    "id": "hs08",
+    "q": "15% de 80?",
+    "gold": "12",
+    "band": "hard_short",
+    "mock_regime": "noisy"
+  },
+  {
+    "id": "hs09",
+    "q": "Símbolo da água?",
+    "gold": "H2O",
+    "band": "hard_short",
+    "mock_regime": "stuck"
+  },
+  {
+    "id": "hs10",
+    "q": "Terceiro planeta?",
+    "gold": "Terra",
+    "band": "hard_short",
+    "mock_regime": "noisy"
+  },
+  {
+    "id": "hl01",
+    "q": "Um professor descreve com detalhes um polígono regular de seis lados iguais e pede só a quantidade de lados. Responda só o número.",
+    "gold": "6",
+    "band": "hard_long",
+    "mock_regime": "flip"
+  },
+  {
+    "id": "hl02",
+    "q": "Numa prova longa de geografia do ensino médio, a última pergunta pede a capital do Japão. Responda só a cidade.",
+    "gold": "Tóquio",
+    "band": "hard_long",
+    "mock_regime": "flip"
+  },
+  {
+    "id": "hl03",
+    "q": "Depois de um enunciado comprido sobre calendário gregoriano, a questão pede quantos dias tem um ano bissexto. Responda só o número.",
+    "gold": "366",
+    "band": "hard_long",
+    "mock_regime": "stuck"
+  },
+  {
+    "id": "hl04",
+    "q": "Em um problema longo de aritmética básica, some dezessete com vinte e oito e entregue apenas o total. Responda só o número.",
+    "gold": "45",
+    "band": "hard_long",
+    "mock_regime": "noisy"
+  },
+  {
+    "id": "hl05",
+    "q": "O texto descreve a Terra como o terceiro planeta a partir do Sol e pede o nome desse planeta. Responda só o nome.",
+    "gold": "Terra",
+    "band": "hard_long",
+    "mock_regime": "noisy"
+  }
 ]

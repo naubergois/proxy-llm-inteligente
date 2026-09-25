@@ -4,8 +4,8 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "proxy-llm-inteligente"
-version = "0.1.0"
-description = "Intelligent LLM proxy: cache, fallback, and stigmergic swarm routing"
+version = "0.2.0"
+description = "Scented doorman: evaporating-board routing vs RouteLLM and FrugalGPT"
 readme = "README.md"
 requires-python = ">=3.11"
 license = { text = "MIT" }
@@ -14,9 +14,13 @@ dependencies = []
 
 [project.optional-dependencies]
 dev = ["pytest>=8.0"]
+mlx = ["mlx-lm"]
+plot = ["matplotlib>=3.8"]
 
 [project.scripts]
 proxy-llm = "proxy_llm.server:main"
+proxy-llm-bench = "proxy_llm.bench:main"
+proxy-llm-plot = "proxy_llm.plot:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]
