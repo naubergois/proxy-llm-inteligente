@@ -1,0 +1,15 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.mypy_cache/
+*.egg-info/
+dist/
+build/
+.DS_Store
+.env
+*.gguf
+models/
+results/*.jsonl
+!results/.gitkeep
+.python-version

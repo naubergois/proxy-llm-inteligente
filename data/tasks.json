@@ -1,0 +1,7 @@
+[
+  {"id": "a01", "q": "Quanto é 2 + 2?", "gold": "4"},
+  {"id": "a02", "q": "Quanto é 2+2?", "gold": "4"},
+  {"id": "f01", "q": "Quantos lados tem um hexágono?", "gold": "6"},
+  {"id": "f02", "q": "Qual a capital do Japão?", "gold": "Tóquio"},
+  {"id": "f03", "q": "Qual o símbolo químico da água?", "gold": "H2O"}
+]
